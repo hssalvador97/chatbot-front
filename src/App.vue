@@ -1,21 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <EjercicioComponent/>
+      </div>
+      <div class="col-md-6">
+        <ChatComponent/>
+      </div>
+    </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ChatComponent from './components/ChatComponent.vue'; 
+import EjercicioComponent from './components/EjercicioComponent.vue'; 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    ChatComponent, 
+    EjercicioComponent
+
+  }, 
 }
 </script>
 
+<!--scoped para solo este componente-->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
